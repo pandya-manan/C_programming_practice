@@ -1,0 +1,18 @@
+13:36:20 **** Rebuild of configuration Release for project trial ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o program.o "..\\program.c" 
+gcc -o trial.exe program.o 
+
+13:36:21 Build Finished. 0 errors, 0 warnings. (took 1s.476ms)
+
+13:36:21 **** Rebuild of configuration Debug for project trial ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o program.o "..\\program.c" 
+gcc -o trial.exe program.o 
+Info: Nothing to build for demo
+13:37:04 **** Incremental Build of configuration Debug for project trial ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o program.o "..\\program.c" 
+gcc -o trial.exe program.o 
+Info: Nothing to build for trial
+Info: Nothing to build for trial
