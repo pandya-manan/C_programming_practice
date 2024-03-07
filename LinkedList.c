@@ -53,6 +53,16 @@ struct Node* insertAfterNode(struct Node* head, struct Node* prevNode, int value
 
 }
 
+struct Node* insertBeforeNode(struct Node* head, struct Node* prevNode, struct Node* nextNode, int value)
+{
+    struct Node* insertNode=(struct Node*)malloc(sizeof(struct Node));
+    insertNode->data=value;
+    prevNode->next=insertNode;
+    insertNode->next=nextNode;
+    return head;
+
+}
+
 struct Node* deleteAtBeginning(struct Node* head)
 {
     struct Node* ptr=head;
@@ -159,6 +169,11 @@ int main()
     traverseLinkedList(head);
     //Deleting the last node from the linked list
     head=deleteLastNode(head);
+    //Accessing the LinkedList Elements from the head node
+    traverseLinkedList(head);
+
+    head=insertBeforeNode(head,second,third,100);
+
     //Accessing the LinkedList Elements from the head node
     traverseLinkedList(head);
 
