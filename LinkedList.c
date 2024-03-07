@@ -172,6 +172,7 @@ int main()
     //Accessing the LinkedList Elements from the head node
     traverseLinkedList(head);
 
+    //Adding a new node before a node (passing previous and next node)
     head=insertBeforeNode(head,second,third,100);
 
     //Accessing the LinkedList Elements from the head node
