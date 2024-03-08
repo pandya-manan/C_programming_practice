@@ -6,6 +6,7 @@ struct Node
     struct Node* next;
 };
 void traverseLinkedList(struct Node* ptr);
+void searchForElement(struct Node* ptr,int value);
 struct Node* insertAtFirst(struct Node* head, int value)
 {
     struct Node* insertNode=(struct Node*)malloc(sizeof(struct Node));
@@ -178,6 +179,12 @@ int main()
     //Accessing the LinkedList Elements from the head node
     traverseLinkedList(head);
 
+    //Searching for element 100 in the linked list (positive case)
+    searchForElement(head,100);
+
+    //Searching for element 63 in the linked list (negative case)
+    searchForElement(head,63);
+
     return 0;
 
 
@@ -190,4 +197,34 @@ void traverseLinkedList(struct Node* ptr)
         ptr=ptr->next;
     }
     printf("\n");
+}
+
+void searchForElement(struct Node* ptr,int value)
+{
+    int index=0;
+    int flag=-1;
+    while(ptr!=NULL)
+    {
+        if(ptr->data==value)
+        {
+            
+            flag=1;
+            break;
+        }
+        else
+        {
+            ptr=ptr->next;
+            index++;
+        }
+        
+        
+    }
+    if(flag==-1)
+    {
+        printf("Element %d not found in the linked list \n",value);
+    }
+    else
+    {
+        printf("Element %d found in the linked list at position %d \n",value,index);
+    }
 }
